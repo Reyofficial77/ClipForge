@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClipForge — AI Creative Director buat Clipper</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <script src="/js/status-banner.js"></script>
+  <header class="topbar">
+    <a href="/" class="brand"><span class="brand-mark"></span> ClipForge</a>
+    <a href="/upload.html" class="pill-link">Mulai Generate →</a>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">AI CREATIVE DIRECTOR UNTUK CLIPPER</span>
+      <h1>Upload video mentah. <span class="highlight">AI kasih tahu</span> bagian mana yang harus dipotong.</h1>
+      <p class="lead">
+        Kapan harus zoom, meme apa yang cocok, subtitle-nya gimana — semua sudah ada di
+        Clip Blueprint. Kamu tinggal ikutin dan edit.
+      </p>
+      <a href="/upload.html" class="btn btn-primary">🔥 Bikin Blueprint Pertamamu</a>
+
+      <div class="timeline-hero" aria-hidden="true">
+        <div class="row">
+          <span>PODCAST_EPISODE_42.MP4</span>
+          <span>01:24:32</span>
+        </div>
+        <div class="timeline-track">
+          <div class="waveform" id="landing-waveform"></div>
+          <div class="clip-marker" style="left: 12%; width: 8%;"></div>
+          <div class="clip-marker violet" style="left: 34%; width: 6%;"></div>
+          <div class="clip-marker mint" style="left: 61%; width: 10%;"></div>
+          <div class="clip-marker" style="left: 80%; width: 7%;"></div>
+          <div class="playhead"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid">
+      <div class="card">
+        <h3>🎯 Bukan CapCut versi AI</h3>
+        <p>ClipForge nggak edit video buat kamu. AI ini otaknya — dia yang mikir, kamu yang eksekusi.</p>
+      </div>
+      <div class="card">
+        <h3>😂 Persona editor gaul</h3>
+        <p>Bukan "a humorous moment was detected". Tapi "BRO WE FOUND IT 😂" — jelas dan nggak kaku.</p>
+      </div>
+      <div class="card">
+        <h3>📋 Blueprint per detik</h3>
+        <p>Timestamp, subtitle, efek, audio, sampai meme — semua dipecah per segmen waktu.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Signature waveform dekoratif di hero — cuma visual, bukan data asli.
+    const wf = document.getElementById("landing-waveform");
+    for (let i = 0; i < 60; i++) {
+      const bar = document.createElement("span");
+      const h = 6 + Math.round(Math.random() * 26);
+      bar.style.height = h + "px";
+      wf.appendChild(bar);
+    }
+  </script>
+</body>
+</html>

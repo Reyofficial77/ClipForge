@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Video — ClipForge</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <script src="/js/status-banner.js"></script>
+  <header class="topbar">
+    <a href="/" class="brand"><span class="brand-mark"></span> ClipForge</a>
+    <a href="/" class="pill-link">Keluar</a>
+  </header>
+
+  <nav class="stepper" aria-label="Progress">
+    <div class="stepper-track"><div class="stepper-fill" style="width: 8%;"></div></div>
+    <div class="stepper-labels">
+      <span class="active">1. Upload</span>
+      <span>2. Rules</span>
+      <span>3. Notes</span>
+      <span>4. Generate</span>
+      <span>5. Candidates</span>
+      <span>6. Blueprint</span>
+    </div>
+  </nav>
+
+  <main class="shell" style="max-width: 640px;">
+    <span class="eyebrow">LANGKAH 1 DARI 6</span>
+    <h1>Kasih source video kamu</h1>
+    <p>Podcast, streaming, wawancara — apa aja. Format MP4, MOV, atau WebM.</p>
+
+    <div class="tab-row" role="tablist" aria-label="Cara masukin video">
+      <button type="button" class="tab-btn active" id="tabFile" role="tab" aria-selected="true">📼 Upload File</button>
+      <button type="button" class="tab-btn" id="tabUrl" role="tab" aria-selected="false">🔗 Video URL</button>
+    </div>
+
+    <div class="card">
+      <div id="panelFile">
+        <div class="dropzone" id="dropzone">
+          <span class="icon">📼</span>
+          <strong>Drag & drop video di sini</strong>
+          <p style="margin: 6px 0 0;">atau klik untuk pilih file dari komputer kamu</p>
+          <input type="file" id="fileInput" accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm" hidden />
+        </div>
+      </div>
+
+      <div id="panelUrl" style="display:none;">
+        <div class="field mt-0">
+          <label for="urlInput">Link video</label>
+          <input type="text" id="urlInput" placeholder="https://youtube.com/watch?v=... atau link .mp4 langsung" />
+          <p class="hint">Bisa link YouTube (AI langsung nonton dari link-nya, nggak perlu download), atau link file video langsung (.mp4/.mov/.webm) — bakal di-download dulu ke server.</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="useUrlBtn">Gunakan Link Ini</button>
+      </div>
+
+      <div id="fileChip" style="display:none;"></div>
+      <p id="errorMsg" style="color:#ff3d81; display:none; margin-top:14px;"></p>
+    </div>
+
+    <div class="btn-row">
+      <a href="/" class="btn btn-ghost">← Kembali</a>
+      <button class="btn btn-primary" id="nextBtn" disabled>Lanjut ke Clip Rules →</button>
+    </div>
+  </main>
+
+  <script src="/js/state.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/upload.js"></script>
+</body>
+</html>

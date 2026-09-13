@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clip Blueprint — ClipForge</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <script src="/js/status-banner.js"></script>
+  <header class="topbar">
+    <a href="/" class="brand"><span class="brand-mark"></span> ClipForge</a>
+    <a href="/candidates.html" class="pill-link">← Pilih clip lain</a>
+  </header>
+
+  <nav class="stepper" aria-label="Progress">
+    <div class="stepper-track"><div class="stepper-fill" style="width: 100%;"></div></div>
+    <div class="stepper-labels">
+      <span class="done">1. Upload</span>
+      <span class="done">2. Rules</span>
+      <span class="done">3. Notes</span>
+      <span class="done">4. Generate</span>
+      <span class="done">5. Candidates</span>
+      <span class="active">6. Blueprint</span>
+    </div>
+  </nav>
+
+  <main class="shell">
+    <div id="blueprintContent">
+      <p class="center">Loading blueprint...</p>
+    </div>
+
+    <div class="chat-box">
+      <p class="section-title" style="margin-top: 0;">💬 Ngobrol sama AI-nya</p>
+      <p style="font-size: 13px;">Nggak cocok? Kasih feedback singkat — AI bakal update blueprint di atas.</p>
+      <div class="chat-log" id="chatLog"></div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder='Contoh: "Bikin lebih lucu" atau "Kurangi meme"' disabled />
+        <button class="btn btn-primary" id="chatSend" disabled>Kirim</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/state.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/blueprint.js"></script>
+</body>
+</html>

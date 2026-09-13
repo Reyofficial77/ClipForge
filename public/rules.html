@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clip Rules — ClipForge</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <script src="/js/status-banner.js"></script>
+  <header class="topbar">
+    <a href="/" class="brand"><span class="brand-mark"></span> ClipForge</a>
+    <a href="/" class="pill-link">Keluar</a>
+  </header>
+
+  <nav class="stepper" aria-label="Progress">
+    <div class="stepper-track"><div class="stepper-fill" style="width: 25%;"></div></div>
+    <div class="stepper-labels">
+      <span class="done">1. Upload</span>
+      <span class="active">2. Rules</span>
+      <span>3. Notes</span>
+      <span>4. Generate</span>
+      <span>5. Candidates</span>
+      <span>6. Blueprint</span>
+    </div>
+  </nav>
+
+  <main class="shell" style="max-width: 640px;">
+    <span class="eyebrow">LANGKAH 2 DARI 6</span>
+    <h1>Set Clip Rules</h1>
+    <p>Kasih tahu AI mau clip buat platform mana dan berapa durasinya.</p>
+
+    <div class="card">
+      <div class="field">
+        <label>Target Platform</label>
+        <div class="choice-grid" id="platformGrid">
+          <button type="button" class="choice-card" data-value="TikTok"><strong>🎵 TikTok</strong><span>Vertikal, cepat</span></button>
+          <button type="button" class="choice-card" data-value="YouTube Shorts"><strong>▶️ YouTube Shorts</strong><span>Vertikal</span></button>
+          <button type="button" class="choice-card" data-value="Instagram Reels"><strong>📸 Instagram Reels</strong><span>Vertikal</span></button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Target Duration</label>
+        <div class="choice-grid" id="durationGrid">
+          <button type="button" class="choice-card" data-value="15-30 sec"><strong>15–30 sec</strong><span>Cepat & padat</span></button>
+          <button type="button" class="choice-card" data-value="30-60 sec"><strong>30–60 sec</strong><span>Standar</span></button>
+          <button type="button" class="choice-card" data-value="60-90 sec"><strong>60–90 sec</strong><span>Lebih panjang</span></button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Content Rules (opsional)</label>
+        <textarea id="contentRules" rows="4" placeholder="Contoh: Jangan gunakan bagian yang membahas politik. Cari momen lucu. Gunakan meme ketika memang diperlukan."></textarea>
+        <p class="hint">Tulis aturan bebas — AI bakal mengikuti instruksi ini saat milih momen.</p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a href="/upload.html" class="btn btn-ghost">← Kembali</a>
+      <button class="btn btn-primary" id="nextBtn" disabled>Lanjut ke Video Notes →</button>
+    </div>
+  </main>
+
+  <script src="/js/state.js"></script>
+  <script src="/js/rules.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI is Cooking — ClipForge</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <script src="/js/status-banner.js"></script>
+  <header class="topbar">
+    <a href="/" class="brand"><span class="brand-mark"></span> ClipForge</a>
+    <span class="pill-link" style="opacity:.5;">Jangan tutup tab ini</span>
+  </header>
+
+  <nav class="stepper" aria-label="Progress">
+    <div class="stepper-track"><div class="stepper-fill" style="width: 60%;"></div></div>
+    <div class="stepper-labels">
+      <span class="done">1. Upload</span>
+      <span class="done">2. Rules</span>
+      <span class="done">3. Notes</span>
+      <span class="active">4. Generate</span>
+      <span>5. Candidates</span>
+      <span>6. Blueprint</span>
+    </div>
+  </nav>
+
+  <main class="shell cooking-wrap">
+    <div class="cooking-orb">🤖</div>
+    <span class="eyebrow center" style="display:block;">AI IS COOKING...</span>
+    <h1 id="cookingTitle" style="font-size: 22px;">Lagi nonton video kamu berkali-kali...</h1>
+
+    <ul class="cooking-list" id="cookingList"></ul>
+
+    <div class="cooking-timeline"><div class="fill" id="cookingFill"></div></div>
+    <p id="statusText" style="margin-top: 16px; font-family: var(--font-mono); font-size: 12.5px;">Almost done...</p>
+    <p id="errorMsg" style="color: var(--pink); display: none;"></p>
+  </main>
+
+  <script src="/js/state.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/generate.js"></script>
+</body>
+</html>

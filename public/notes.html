@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Notes — ClipForge</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <script src="/js/status-banner.js"></script>
+  <header class="topbar">
+    <a href="/" class="brand"><span class="brand-mark"></span> ClipForge</a>
+    <a href="/" class="pill-link">Keluar</a>
+  </header>
+
+  <nav class="stepper" aria-label="Progress">
+    <div class="stepper-track"><div class="stepper-fill" style="width: 42%;"></div></div>
+    <div class="stepper-labels">
+      <span class="done">1. Upload</span>
+      <span class="done">2. Rules</span>
+      <span class="active">3. Notes</span>
+      <span>4. Generate</span>
+      <span>5. Candidates</span>
+      <span>6. Blueprint</span>
+    </div>
+  </nav>
+
+  <main class="shell" style="max-width: 640px;">
+    <span class="eyebrow">LANGKAH 3 DARI 6</span>
+    <h1>Kasih Creative Direction</h1>
+    <p>Ceritain vibe yang kamu mau. Ini yang bakal jadi "arahan sutradara" buat AI.</p>
+
+    <div class="card">
+      <div class="field">
+        <label>Video Notes / Style</label>
+        <textarea id="notes" rows="6" placeholder='Contoh: "Buat seperti clip TikTok yang sangat cepat. Saya ingin videonya lucu dan tidak terlalu serius. Gunakan meme ketika ada punchline. Jangan terlalu banyak transition."'></textarea>
+        <p class="hint">Nggak wajib detail teknis — cukup ceritain feel yang kamu mau, AI yang nerjemahin ke instruksi editing.</p>
+      </div>
+
+      <div class="field mt-0">
+        <label style="font-weight: 500; color: var(--text-dim); font-size: 13px;">Contoh cepat, klik buat isi otomatis:</label>
+        <div class="tag-row" id="presetRow">
+          <button type="button" class="tag" data-preset="Cepat, lucu, banyak meme di punchline, transisi minim.">⚡ Cepat & lucu</button>
+          <button type="button" class="tag" data-preset="Serius dan informatif, minim meme, subtitle bersih.">🎯 Serius & clean</button>
+          <button type="button" class="tag" data-preset="Dramatis, banyak zoom di momen kontroversial, hook kuat di awal.">🔥 Dramatis</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a href="/rules.html" class="btn btn-ghost">← Kembali</a>
+      <button class="btn btn-primary" id="nextBtn">🤖 GENERATE CLIPS</button>
+    </div>
+  </main>
+
+  <script src="/js/state.js"></script>
+  <script src="/js/notes.js"></script>
+</body>
+</html>
